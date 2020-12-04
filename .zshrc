@@ -4,7 +4,6 @@
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
-
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -69,13 +68,16 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
+# PATH ENTIRES
+export PATH=/home/safder/.local/bin:$PATH
 
 # Which plugins would you like to load?
 # Standard plugins can be found in $ZSH/plugins/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-completions vscode)
+plugins=(git zsh-autosuggestions zsh-completions vscode)
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#ff00ff,bg=cyan,bold,underline"
 
 source $ZSH/oh-my-zsh.sh
 
@@ -103,9 +105,9 @@ source $ZSH/oh-my-zsh.sh
 #
 # Example aliases
 alias zshconfig="sudo vim ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+alias spicetify=/home/safder/spicetify-cli/spicetify
 source ~/powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-source /home/safder/Desktop/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /home/safder/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
